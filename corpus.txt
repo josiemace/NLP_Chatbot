@@ -1,0 +1,302 @@
+Natural language processing (NLP) is an interdisciplinary subfield of linguistics and computer science. It is primarily concerned with processing natural language datasets, such as text corpora or speech corpora, using either rule-based or probabilistic (i.e. statistical and, most recently, neural network-based) machine learning approaches. The goal is a computer capable of "understanding" the contents of documents, including the contextual nuances of the language within them. The technology can then accurately extract information and insights contained in the documents as well as categorize and organize the documents themselves.
+
+Challenges in natural language processing frequently involve speech recognition, natural-language understanding, and natural-language generation.
+
+History[edit]
+Further information: History of natural language processing
+Natural language processing has its roots in the 1950s. Already in 1950, Alan Turing published an article titled "Computing Machinery and Intelligence" which proposed what is now called the Turing test as a criterion of intelligence, though at the time that was not articulated as a problem separate from artificial intelligence. The proposed test includes a task that involves the automated interpretation and generation of natural language.
+
+Symbolic NLP (1950s – early 1990s)[edit]
+The premise of symbolic NLP is well-summarized by John Searle's Chinese room experiment: Given a collection of rules (e.g., a Chinese phrasebook, with questions and matching answers), the computer emulates natural language understanding (or other NLP tasks) by applying those rules to the data it confronts.
+
+1950s: The Georgetown experiment in 1954 involved fully automatic translation of more than sixty Russian sentences into English. The authors claimed that within three or five years, machine translation would be a solved problem.[1] However, real progress was much slower, and after the ALPAC report in 1966, which found that ten-year-long research had failed to fulfill the expectations, funding for machine translation was dramatically reduced. Little further research in machine translation was conducted in America (though some research continued elsewhere, such as Japan and Europe[2]) until the late 1980s when the first statistical machine translation systems were developed.
+1960s: Some notably successful natural language processing systems developed in the 1960s were SHRDLU, a natural language system working in restricted "blocks worlds" with restricted vocabularies, and ELIZA, a simulation of a Rogerian psychotherapist, written by Joseph Weizenbaum between 1964 and 1966. Using almost no information about human thought or emotion, ELIZA sometimes provided a startlingly human-like interaction. When the "patient" exceeded the very small knowledge base, ELIZA might provide a generic response, for example, responding to "My head hurts" with "Why do you say your head hurts?". Ross Quillian's successful work on natural language was demonstrated with a vocabulary of only twenty words, because that was all that would fit in a computer memory at the time.[3]
+1970s: During the 1970s, many programmers began to write "conceptual ontologies", which structured real-world information into computer-understandable data. Examples are MARGIE (Schank, 1975), SAM (Cullingford, 1978), PAM (Wilensky, 1978), TaleSpin (Meehan, 1976), QUALM (Lehnert, 1977), Politics (Carbonell, 1979), and Plot Units (Lehnert 1981). During this time, the first chatterbots were written (e.g., PARRY).
+1980s: The 1980s and early 1990s mark the heyday of symbolic methods in NLP. Focus areas of the time included research on rule-based parsing (e.g., the development of HPSG as a computational operationalization of generative grammar), morphology (e.g., two-level morphology[4]), semantics (e.g., Lesk algorithm), reference (e.g., within Centering Theory[5]) and other areas of natural language understanding (e.g., in the Rhetorical Structure Theory). Other lines of research were continued, e.g., the development of chatterbots with Racter and Jabberwacky. An important development (that eventually led to the statistical turn in the 1990s) was the rising importance of quantitative evaluation in this period.[6]
+Statistical NLP (1990s–2010s)[edit]
+Up to the 1980s, most natural language processing systems were based on complex sets of hand-written rules. Starting in the late 1980s, however, there was a revolution in natural language processing with the introduction of machine learning algorithms for language processing. This was due to both the steady increase in computational power (see Moore's law) and the gradual lessening of the dominance of Chomskyan theories of linguistics (e.g. transformational grammar), whose theoretical underpinnings discouraged the sort of corpus linguistics that underlies the machine-learning approach to language processing.[7]
+
+1990s: Many of the notable early successes on statistical methods in NLP occurred in the field of machine translation, due especially to work at IBM Research, such as IBM alignment models. These systems were able to take advantage of existing multilingual textual corpora that had been produced by the Parliament of Canada and the European Union as a result of laws calling for the translation of all governmental proceedings into all official languages of the corresponding systems of government. However, most other systems depended on corpora specifically developed for the tasks implemented by these systems, which was (and often continues to be) a major limitation in the success of these systems. As a result, a great deal of research has gone into methods of more effectively learning from limited amounts of data.
+2000s: With the growth of the web, increasing amounts of raw (unannotated) language data has become available since the mid-1990s. Research has thus increasingly focused on unsupervised and semi-supervised learning algorithms. Such algorithms can learn from data that has not been hand-annotated with the desired answers or using a combination of annotated and non-annotated data. Generally, this task is much more difficult than supervised learning, and typically produces less accurate results for a given amount of input data. However, there is an enormous amount of non-annotated data available (including, among other things, the entire content of the World Wide Web), which can often make up for the inferior results if the algorithm used has a low enough time complexity to be practical.
+Neural NLP (present)[edit]
+In 2003, word n-gram model, at the time the best statistical algorithm, was overperformed by a multi-layer perceptron (with a single hidden layer and context length of several words trained on up to 14 million of words with a CPU cluster in language modelling) by Yoshua Bengio with co-authors.[8]
+
+In 2010, Tomáš Mikolov (then a PhD student at Brno University of Technology) with co-authors applied a simple recurrent neural network with a single hidden layer to language modelling,[9] and in the following years he went on to develop Word2vec. In the 2010s, representation learning and deep neural network-style (featuring many hidden layers) machine learning methods became widespread in natural language processing. That popularity was due partly to a flurry of results showing that such techniques[10][11] can achieve state-of-the-art results in many natural language tasks, e.g., in language modeling[12] and parsing.[13][14] This is increasingly important in medicine and healthcare, where NLP helps analyze notes and text in electronic health records that would otherwise be inaccessible for study when seeking to improve care[15] or protect patient privacy.[16]
+
+Approaches: Symbolic, statistical, neural networks[edit]
+Symbolic approach, i.e., the hand-coding of a set of rules for manipulating symbols, coupled with a dictionary lookup, was historically the first approach used both by AI in general and by NLP in particular:[17][18] such as by writing grammars or devising heuristic rules for stemming.
+
+Machine learning approaches, which include both statistical and neural networks, on the other hand, have many advantages over the symbolic approach:
+
+both statistical and neural networks methods can focus more on the most common cases extracted from a corpus of texts, whereas the rule-based approach needs to provide rules for both rare cases and common ones equally.
+language models, produced by either statistical or neural networks methods, are more robust to both unfamiliar (e.g. containing words or structures that have not been seen before) and erroneous input (e.g. with misspelled words or words accidentally omitted) in comparison to the rule-based systems, which are also more costly to produce.
+the larger such a (probabilistic) language model is, the more accurate it becomes, in contrast to rule-based systems that can gain accuracy only by increasing the amount and complexity of the rules leading to intractability problems.
+Although rule-based systems for manipulating symbols were still in use in 2020, they have become mostly obsolete with the advance of LLMs in 2023.
+
+Before that they were commonly used:
+
+when the amount of training data is insufficient to successfully apply machine learning methods, e.g., for the machine translation of low-resource languages such as provided by the Apertium system,
+for preprocessing in NLP pipelines, e.g., tokenization, or
+for postprocessing and transforming the output of NLP pipelines, e.g., for knowledge extraction from syntactic parses.
+Statistical approach[edit]
+In the late 1980s and mid-1990s, the statistical approach ended a period of AI winter, which was caused by the inefficiencies of the rule-based approaches.[19][20]
+
+The earliest decision trees, producing systems of hard if–then rules, were still very similar to the old rule-based approaches. Only the introduction of hidden Markov models, applied to part-of-speech tagging, announced the end of the old rule-based approach.
+
+Neural networks[edit]
+Further information: Artificial neural network
+A major drawback of statistical methods is that they require elaborate feature engineering. Since 2015,[21] the statistical approach was replaced by neural networks approach, using word embeddings to capture semantic properties of words.
+
+Intermediate tasks (e.g., part-of-speech tagging and dependency parsing) have not been needed anymore.
+
+Neural machine translation, based on then-newly-invented sequence-to-sequence transformations, made obsolete the intermediate steps, such as word alignment, previously necessary for statistical machine translation.
+
+Common NLP tasks[edit]
+The following is a list of some of the most commonly researched tasks in natural language processing. Some of these tasks have direct real-world applications, while others more commonly serve as subtasks that are used to aid in solving larger tasks.
+
+Though natural language processing tasks are closely intertwined, they can be subdivided into categories for convenience. A coarse division is given below.
+
+Text and speech processing[edit]
+Optical character recognition (OCR)
+Given an image representing printed text, determine the corresponding text.
+Speech recognition
+Given a sound clip of a person or people speaking, determine the textual representation of the speech. This is the opposite of text to speech and is one of the extremely difficult problems colloquially termed "AI-complete" (see above). In natural speech there are hardly any pauses between successive words, and thus speech segmentation is a necessary subtask of speech recognition (see below). In most spoken languages, the sounds representing successive letters blend into each other in a process termed coarticulation, so the conversion of the analog signal to discrete characters can be a very difficult process. Also, given that words in the same language are spoken by people with different accents, the speech recognition software must be able to recognize the wide variety of input as being identical to each other in terms of its textual equivalent.
+Speech segmentation
+Given a sound clip of a person or people speaking, separate it into words. A subtask of speech recognition and typically grouped with it.
+Text-to-speech
+Given a text, transform those units and produce a spoken representation. Text-to-speech can be used to aid the visually impaired.[22]
+Word segmentation (Tokenization)
+Separate a chunk of continuous text into separate words. For a language like English, this is fairly trivial, since words are usually separated by spaces. However, some written languages like Chinese, Japanese and Thai do not mark word boundaries in such a fashion, and in those languages text segmentation is a significant task requiring knowledge of the vocabulary and morphology of words in the language. Sometimes this process is also used in cases like bag of words (BOW) creation in data mining.
+Morphological analysis[edit]
+Lemmatization
+The task of removing inflectional endings only and to return the base dictionary form of a word which is also known as a lemma. Lemmatization is another technique for reducing words to their normalized form. But in this case, the transformation actually uses a dictionary to map words to their actual form.[23]
+Morphological segmentation
+Separate words into individual morphemes and identify the class of the morphemes. The difficulty of this task depends greatly on the complexity of the morphology (i.e., the structure of words) of the language being considered. English has fairly simple morphology, especially inflectional morphology, and thus it is often possible to ignore this task entirely and simply model all possible forms of a word (e.g., "open, opens, opened, opening") as separate words. In languages such as Turkish or Meitei, a highly agglutinated Indian language, however, such an approach is not possible, as each dictionary entry has thousands of possible word forms.[24]
+Part-of-speech tagging
+Given a sentence, determine the part of speech (POS) for each word. Many words, especially common ones, can serve as multiple parts of speech. For example, "book" can be a noun ("the book on the table") or verb ("to book a flight"); "set" can be a noun, verb or adjective; and "out" can be any of at least five different parts of speech.
+Stemming
+The process of reducing inflected (or sometimes derived) words to a base form (e.g., "close" will be the root for "closed", "closing", "close", "closer" etc.). Stemming yields similar results as lemmatization, but does so on grounds of rules, not a dictionary.
+Syntactic analysis[edit]
+Grammar induction[25]
+Generate a formal grammar that describes a language's syntax.
+Sentence breaking (also known as "sentence boundary disambiguation")
+Given a chunk of text, find the sentence boundaries. Sentence boundaries are often marked by periods or other punctuation marks, but these same characters can serve other purposes (e.g., marking abbreviations).
+Parsing
+Determine the parse tree (grammatical analysis) of a given sentence. The grammar for natural languages is ambiguous and typical sentences have multiple possible analyses: perhaps surprisingly, for a typical sentence there may be thousands of potential parses (most of which will seem completely nonsensical to a human). There are two primary types of parsing: dependency parsing and constituency parsing. Dependency parsing focuses on the relationships between words in a sentence (marking things like primary objects and predicates), whereas constituency parsing focuses on building out the parse tree using a probabilistic context-free grammar (PCFG) (see also stochastic grammar).
+Lexical semantics (of individual words in context)[edit]
+Lexical semantics
+What is the computational meaning of individual words in context?
+Distributional semantics
+How can we learn semantic representations from data?
+Named entity recognition (NER)
+Given a stream of text, determine which items in the text map to proper names, such as people or places, and what the type of each such name is (e.g. person, location, organization). Although capitalization can aid in recognizing named entities in languages such as English, this information cannot aid in determining the type of named entity, and in any case, is often inaccurate or insufficient. For example, the first letter of a sentence is also capitalized, and named entities often span several words, only some of which are capitalized. Furthermore, many other languages in non-Western scripts (e.g. Chinese or Arabic) do not have any capitalization at all, and even languages with capitalization may not consistently use it to distinguish names. For example, German capitalizes all nouns, regardless of whether they are names, and French and Spanish do not capitalize names that serve as adjectives. Another name for this task is token classification.[26]
+Sentiment analysis (see also Multimodal sentiment analysis)
+Extract subjective information usually from a set of documents, often using online reviews to determine "polarity" about specific objects. It is especially useful for identifying trends of public opinion in social media, for marketing.
+Terminology extraction
+The goal of terminology extraction is to automatically extract relevant terms from a given corpus.
+Word-sense disambiguation (WSD)
+Many words have more than one meaning; we have to select the meaning which makes the most sense in context. For this problem, we are typically given a list of words and associated word senses, e.g. from a dictionary or an online resource such as WordNet.
+Entity linking
+Many words—typically proper names—refer to named entities; here we have to select the entity (a famous individual, a location, a company, etc.) which is referred to in context.
+Relational semantics (semantics of individual sentences)[edit]
+Relationship extraction
+Given a chunk of text, identify the relationships among named entities (e.g. who is married to whom).
+Semantic parsing
+Given a piece of text (typically a sentence), produce a formal representation of its semantics, either as a graph (e.g., in AMR parsing) or in accordance with a logical formalism (e.g., in DRT parsing). This challenge typically includes aspects of several more elementary NLP tasks from semantics (e.g., semantic role labelling, word-sense disambiguation) and can be extended to include full-fledged discourse analysis (e.g., discourse analysis, coreference; see Natural language understanding below).
+Semantic role labelling (see also implicit semantic role labelling below)
+Given a single sentence, identify and disambiguate semantic predicates (e.g., verbal frames), then identify and classify the frame elements (semantic roles).
+Discourse (semantics beyond individual sentences)[edit]
+Coreference resolution
+Given a sentence or larger chunk of text, determine which words ("mentions") refer to the same objects ("entities"). Anaphora resolution is a specific example of this task, and is specifically concerned with matching up pronouns with the nouns or names to which they refer. The more general task of coreference resolution also includes identifying so-called "bridging relationships" involving referring expressions. For example, in a sentence such as "He entered John's house through the front door", "the front door" is a referring expression and the bridging relationship to be identified is the fact that the door being referred to is the front door of John's house (rather than of some other structure that might also be referred to).
+Discourse analysis
+This rubric includes several related tasks. One task is discourse parsing, i.e., identifying the discourse structure of a connected text, i.e. the nature of the discourse relationships between sentences (e.g. elaboration, explanation, contrast). Another possible task is recognizing and classifying the speech acts in a chunk of text (e.g. yes–no question, content question, statement, assertion, etc.).
+Implicit semantic role labelling
+Given a single sentence, identify and disambiguate semantic predicates (e.g., verbal frames) and their explicit semantic roles in the current sentence (see Semantic role labelling above). Then, identify semantic roles that are not explicitly realized in the current sentence, classify them into arguments that are explicitly realized elsewhere in the text and those that are not specified, and resolve the former against the local text. A closely related task is zero anaphora resolution, i.e., the extension of coreference resolution to pro-drop languages.
+Recognizing textual entailment
+Given two text fragments, determine if one being true entails the other, entails the other's negation, or allows the other to be either true or false.[27]
+Topic segmentation and recognition
+Given a chunk of text, separate it into segments each of which is devoted to a topic, and identify the topic of the segment.
+Argument mining
+The goal of argument mining is the automatic extraction and identification of argumentative structures from natural language text with the aid of computer programs.[28] Such argumentative structures include the premise, conclusions, the argument scheme and the relationship between the main and subsidiary argument, or the main and counter-argument within discourse.[29][30]
+Higher-level NLP applications[edit]
+Automatic summarization (text summarization)
+Produce a readable summary of a chunk of text. Often used to provide summaries of the text of a known type, such as research papers, articles in the financial section of a newspaper.
+Grammatical error correction
+Grammatical error detection and correction involves a great band-width of problems on all levels of linguistic analysis (phonology/orthography, morphology, syntax, semantics, pragmatics). Grammatical error correction is impactful since it affects hundreds of millions of people that use or acquire English as a second language. It has thus been subject to a number of shared tasks since 2011.[31][32][33] As far as orthography, morphology, syntax and certain aspects of semantics are concerned, and due to the development of powerful neural language models such as GPT-2, this can now (2019) be considered a largely solved problem and is being marketed in various commercial applications.
+Machine translation (MT)
+Automatically translate text from one human language to another. This is one of the most difficult problems, and is a member of a class of problems colloquially termed "AI-complete", i.e. requiring all of the different types of knowledge that humans possess (grammar, semantics, facts about the real world, etc.) to solve properly.
+Natural-language understanding (NLU)
+Convert chunks of text into more formal representations such as first-order logic structures that are easier for computer programs to manipulate. Natural language understanding involves the identification of the intended semantic from the multiple possible semantics which can be derived from a natural language expression which usually takes the form of organized notations of natural language concepts. Introduction and creation of language metamodel and ontology are efficient however empirical solutions. An explicit formalization of natural language semantics without confusions with implicit assumptions such as closed-world assumption (CWA) vs. open-world assumption, or subjective Yes/No vs. objective True/False is expected for the construction of a basis of semantics formalization.[34]
+Natural-language generation (NLG):
+Convert information from computer databases or semantic intents into readable human language.
+Book generation
+Not an NLP task proper but an extension of natural language generation and other NLP tasks is the creation of full-fledged books. The first machine-generated book was created by a rule-based system in 1984 (Racter, The policeman's beard is half-constructed).[35] The first published work by a neural network was published in 2018, 1 the Road, marketed as a novel, contains sixty million words. Both these systems are basically elaborate but non-sensical (semantics-free) language models. The first machine-generated science book was published in 2019 (Beta Writer, Lithium-Ion Batteries, Springer, Cham).[36] Unlike Racter and 1 the Road, this is grounded on factual knowledge and based on text summarization.
+Document AI
+A Document AI platform sits on top of the NLP technology enabling users with no prior experience of artificial intelligence, machine learning or NLP to quickly train a computer to extract the specific data they need from different document types. NLP-powered Document AI enables non-technical teams to quickly access information hidden in documents, for example, lawyers, business analysts and accountants.[37]
+Dialogue management
+Computer systems intended to converse with a human.
+Question answering
+Given a human-language question, determine its answer. Typical questions have a specific right answer (such as "What is the capital of Canada?"), but sometimes open-ended questions are also considered (such as "What is the meaning of life?").
+Text-to-image generation
+Given a description of an image, generate an image that matches the description.[38]
+Text-to-scene generation
+Given a description of a scene, generate a 3D model of the scene.[39][40]
+Text-to-video
+Given a description of a video, generate a video that matches the description.[41][42]
+General tendencies and (possible) future directions[edit]
+Based on long-standing trends in the field, it is possible to extrapolate future directions of NLP. As of 2020, three trends among the topics of the long-standing series of CoNLL Shared Tasks can be observed:[43]
+
+Interest on increasingly abstract, "cognitive" aspects of natural language (1999–2001: shallow parsing, 2002–03: named entity recognition, 2006–09/2017–18: dependency syntax, 2004–05/2008–09 semantic role labelling, 2011–12 coreference, 2015–16: discourse parsing, 2019: semantic parsing).
+Increasing interest in multilinguality, and, potentially, multimodality (English since 1999; Spanish, Dutch since 2002; German since 2003; Bulgarian, Danish, Japanese, Portuguese, Slovenian, Swedish, Turkish since 2006; Basque, Catalan, Chinese, Greek, Hungarian, Italian, Turkish since 2007; Czech since 2009; Arabic since 2012; 2017: 40+ languages; 2018: 60+/100+ languages)
+Elimination of symbolic representations (rule-based over supervised towards weakly supervised methods, representation learning and end-to-end systems)
+Cognition and NLP[edit]
+Most higher-level NLP applications involve aspects that emulate intelligent behaviour and apparent comprehension of natural language. More broadly speaking, the technical operationalization of increasingly advanced aspects of cognitive behaviour represents one of the developmental trajectories of NLP (see trends among CoNLL shared tasks above).
+
+Cognition refers to "the mental action or process of acquiring knowledge and understanding through thought, experience, and the senses."[44] Cognitive science is the interdisciplinary, scientific study of the mind and its processes.[45] Cognitive linguistics is an interdisciplinary branch of linguistics, combining knowledge and research from both psychology and linguistics.[46] Especially during the age of symbolic NLP, the area of computational linguistics maintained strong ties with cognitive studies.
+
+As an example, George Lakoff offers a methodology to build natural language processing (NLP) algorithms through the perspective of cognitive science, along with the findings of cognitive linguistics,[47] with two defining aspects:
+
+Apply the theory of conceptual metaphor, explained by Lakoff as "the understanding of one idea, in terms of another" which provides an idea of the intent of the author.[48] For example, consider the English word big. When used in a comparison ("That is a big tree"), the author's intent is to imply that the tree is physically large relative to other trees or the authors experience. When used metaphorically ("Tomorrow is a big day"), the author's intent to imply importance. The intent behind other usages, like in "She is a big person", will remain somewhat ambiguous to a person and a cognitive NLP algorithm alike without additional information.
+Assign relative measures of meaning to a word, phrase, sentence or piece of text based on the information presented before and after the piece of text being analyzed, e.g., by means of a probabilistic context-free grammar (PCFG). The mathematical equation for such algorithms is presented in US patent 9269353 :
+
+Where,
+RMM, is the Relative Measure of Meaning
+token, is any block of text, sentence, phrase or word
+N, is the number of tokens being analyzed
+PMM, is the Probable Measure of Meaning based on a corpora
+d, is the location of the token along the sequence of N-1 tokens
+PF, is the Probability Function specific to a language
+Ties with cognitive linguistics are part of the historical heritage of NLP, but they have been less frequently addressed since the statistical turn during the 1990s. Nevertheless, approaches to develop cognitive models towards technically operationalizable frameworks have been pursued in the context of various frameworks, e.g., of cognitive grammar,[49] functional grammar,[50] construction grammar,[51] computational psycholinguistics and cognitive neuroscience (e.g., ACT-R), however, with limited uptake in mainstream NLP (as measured by presence on major conferences[52] of the ACL). More recently, ideas of cognitive NLP have been revived as an approach to achieve explainability, e.g., under the notion of "cognitive AI".[53] Likewise, ideas of cognitive NLP are inherent to neural models multimodal NLP (although rarely made explicit)[54] and developments in Artificial intelligence, specifically tools and technologies using Large language model approaches.[55]
+
+Lemmatisation (or lemmatization) in linguistics is the process of grouping together the inflected forms of a word so they can be analysed as a single item, identified by the word's lemma, or dictionary form.[1]
+
+In computational linguistics, lemmatisation is the algorithmic process of determining the lemma of a word based on its intended meaning. Unlike stemming, lemmatisation depends on correctly identifying the intended part of speech and meaning of a word in a sentence, as well as within the larger context surrounding that sentence, such as neighboring sentences or even an entire document. As a result, developing efficient lemmatisation algorithms is an open area of research.[2][3][4]
+
+Description[edit]
+In many languages, words appear in several inflected forms. For example, in English, the verb 'to walk' may appear as 'walk', 'walked', 'walks' or 'walking'. The base form, 'walk', that one might look up in a dictionary, is called the lemma for the word. The association of the base form with a part of speech is often called a lexeme of the word.
+
+Lemmatisation is closely related to stemming. The difference is that a stemmer operates on a single word without knowledge of the context, and therefore cannot discriminate between words which have different meanings depending on part of speech. However, stemmers are typically easier to implement and run faster. The reduced "accuracy" may not matter for some applications. In fact, when used within information retrieval systems, stemming improves query recall accuracy, or true positive rate, when compared to lemmatisation. Nonetheless, stemming reduces precision, or the proportion of positively-labeled instances that are actually positive, for such systems.[5]
+
+For instance:
+
+The word "better" has "good" as its lemma. This link is missed by stemming, as it requires a dictionary look-up.
+The word "walk" is the base form for the word "walking", and hence this is matched in both stemming and lemmatisation.
+The word "meeting" can be either the base form of a noun or a form of a verb ("to meet") depending on the context; e.g., "in our last meeting" or "We are meeting again tomorrow". Unlike stemming, lemmatisation attempts to select the correct lemma depending on the context.
+Document indexing software like Lucene[6] can store the base stemmed format of the word without the knowledge of meaning, but only considering word formation grammar rules. The stemmed word itself might not be a valid word: 'lazy', as seen in the example below, is stemmed by many stemmers to 'lazi'. This is because the purpose of stemming is not to produce the appropriate lemma – that is a more challenging task that requires knowledge of context. The main purpose of stemming is to map different forms of a word to a single form.[7] As a rule-based algorithm, dependent only upon the spelling of a word, it sacrifices accuracy to ensure that, for example, when 'laziness' is stemmed to 'lazi', it has the same stem as 'lazy'.
+
+Algorithms[edit]
+A trivial way to do lemmatization is by simple dictionary lookup. This works well for straightforward inflected forms, but a rule-based system will be needed for other cases, such as in languages with long compound words. Such rules can be either hand-crafted or learned automatically from an annotated corpus.
+
+Use in biomedicine[edit]
+Morphological analysis of published biomedical literature can yield useful results. Morphological processing of biomedical text can be more effective by a specialised lemmatisation program for biomedicine, and may improve the accuracy of practical information extraction tasks.[8]
+
+In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. The stem need not be identical to the morphological root of the word; it is usually sufficient that related words map to the same stem, even if this stem is not in itself a valid root. Algorithms for stemming have been studied in computer science since the 1960s. Many search engines treat words with the same stem as synonyms as a kind of query expansion, a process called conflation.
+
+A computer program or subroutine that stems word may be called a stemming program, stemming algorithm, or stemmer.
+
+Examples[edit]
+A stemmer for English operating on the stem cat should identify such strings as cats, catlike, and catty. A stemming algorithm might also reduce the words fishing, fished, and fisher to the stem fish. The stem need not be a word, for example the Porter algorithm reduces, argue, argued, argues, arguing, and argus to the stem argu.
+
+History[edit]
+The first published stemmer was written by Julie Beth Lovins in 1968.[1] This paper was remarkable for its early date and had great influence on later work in this area.[citation needed] Her paper refers to three earlier major attempts at stemming algorithms, by Professor John W. Tukey of Princeton University, the algorithm developed at Harvard University by Michael Lesk, under the direction of Professor Gerard Salton, and a third algorithm developed by James L. Dolby of R and D Consultants, Los Altos, California.
+
+A later stemmer was written by Martin Porter and was published in the July 1980 issue of the journal Program. This stemmer was very widely used and became the de facto standard algorithm used for English stemming. Dr. Porter received the Tony Kent Strix award in 2000 for his work on stemming and information retrieval.
+
+Many implementations of the Porter stemming algorithm were written and freely distributed; however, many of these implementations contained subtle flaws. As a result, these stemmers did not match their potential. To eliminate this source of error, Martin Porter released an official free software (mostly BSD-licensed) implementation[2] of the algorithm around the year 2000. He extended this work over the next few years by building Snowball, a framework for writing stemming algorithms, and implemented an improved English stemmer together with stemmers for several other languages.
+
+The Paice-Husk Stemmer was developed by Chris D Paice at Lancaster University in the late 1980s, it is an iterative stemmer and features an externally stored set of stemming rules. The standard set of rules provides a 'strong' stemmer and may specify the removal or replacement of an ending. The replacement technique avoids the need for a separate stage in the process to recode or provide partial matching. Paice also developed a direct measurement for comparing stemmers based on counting the over-stemming and under-stemming errors.
+
+Algorithms[edit]
+Unsolved problem in computer science:
+Is there any perfect stemming algorithm in English language?
+
+(more unsolved problems in computer science)
+There are several types of stemming algorithms which differ in respect to performance and accuracy and how certain stemming obstacles are overcome.
+
+A simple stemmer looks up the inflected form in a lookup table. The advantages of this approach are that it is simple, fast, and easily handles exceptions. The disadvantages are that all inflected forms must be explicitly listed in the table: new or unfamiliar words are not handled, even if they are perfectly regular (e.g. cats ~ cat), and the table may be large. For languages with simple morphology, like English, table sizes are modest, but highly inflected languages like Turkish may have hundreds of potential inflected forms for each root.
+
+A lookup approach may use preliminary part-of-speech tagging to avoid overstemming.[3]
+
+The production technique[edit]
+The lookup table used by a stemmer is generally produced semi-automatically. For example, if the word is "run", then the inverted algorithm might automatically generate the forms "running", "runs", "runned", and "runly". The last two forms are valid constructions, but they are unlikely.[citation needed].
+
+Suffix-stripping algorithms[edit]
+Suffix stripping algorithms do not rely on a lookup table that consists of inflected forms and root form relations. Instead, a typically smaller list of "rules" is stored which provides a path for the algorithm, given an input word form, to find its root form. Some examples of the rules include:
+
+if the word ends in 'ed', remove the 'ed'
+if the word ends in 'ing', remove the 'ing'
+if the word ends in 'ly', remove the 'ly'
+Suffix stripping approaches enjoy the benefit of being much simpler to maintain than brute force algorithms, assuming the maintainer is sufficiently knowledgeable in the challenges of linguistics and morphology and encoding suffix stripping rules. Suffix stripping algorithms are sometimes regarded as crude given the poor performance when dealing with exceptional relations (like 'ran' and 'run'). The solutions produced by suffix stripping algorithms are limited to those lexical categories which have well known suffixes with few exceptions. This, however, is a problem, as not all parts of speech have such a well formulated set of rules. Lemmatisation attempts to improve upon this challenge.
+
+Prefix stripping may also be implemented. Of course, not all languages use prefixing or suffixing.
+
+Additional algorithm criteria[edit]
+Suffix stripping algorithms may differ in results for a variety of reasons. One such reason is whether the algorithm constrains whether the output word must be a real word in the given language. Some approaches do not require the word to actually exist in the language lexicon (the set of all words in the language). Alternatively, some suffix stripping approaches maintain a database (a large list) of all known morphological word roots that exist as real words. These approaches check the list for the existence of the term prior to making a decision. Typically, if the term does not exist, alternate action is taken. This alternate action may involve several other criteria. The non-existence of an output term may serve to cause the algorithm to try alternate suffix stripping rules.
+
+It can be the case that two or more suffix stripping rules apply to the same input term, which creates an ambiguity as to which rule to apply. The algorithm may assign (by human hand or stochastically) a priority to one rule or another. Or the algorithm may reject one rule application because it results in a non-existent term whereas the other overlapping rule does not. For example, given the English term friendlies, the algorithm may identify the ies suffix and apply the appropriate rule and achieve the result of friendl. Friendl is likely not found in the lexicon, and therefore the rule is rejected.
+
+One improvement upon basic suffix stripping is the use of suffix substitution. Similar to a stripping rule, a substitution rule replaces a suffix with an alternate suffix. For example, there could exist a rule that replaces ies with y. How this affects the algorithm varies on the algorithm's design. To illustrate, the algorithm may identify that both the ies suffix stripping rule as well as the suffix substitution rule apply. Since the stripping rule results in a non-existent term in the lexicon, but the substitution rule does not, the substitution rule is applied instead. In this example, friendlies becomes friendly instead of friendl'.
+
+Diving further into the details, a common technique is to apply rules in a cyclical fashion (recursively, as computer scientists would say). After applying the suffix substitution rule in this example scenario, a second pass is made to identify matching rules on the term friendly, where the ly stripping rule is likely identified and accepted. In summary, friendlies becomes (via substitution) friendly which becomes (via stripping) friend.
+
+This example also helps illustrate the difference between a rule-based approach and a brute force approach. In a brute force approach, the algorithm would search for friendlies in the set of hundreds of thousands of inflected word forms and ideally find the corresponding root form friend. In the rule-based approach, the three rules mentioned above would be applied in succession to converge on the same solution. Chances are that the brute force approach would be slower, as lookup algorithms have a direct access to the solution, while rule-based should try several options, and combinations of them, and then choose which result seems to be the best.
+
+Lemmatisation algorithms[edit]
+A more complex approach to the problem of determining a stem of a word is lemmatisation. This process involves first determining the part of speech of a word, and applying different normalization rules for each part of speech. The part of speech is first detected prior to attempting to find the root since for some languages, the stemming rules change depending on a word's part of speech.
+
+This approach is highly conditional upon obtaining the correct lexical category (part of speech). While there is overlap between the normalization rules for certain categories, identifying the wrong category or being unable to produce the right category limits the added benefit of this approach over suffix stripping algorithms. The basic idea is that, if the stemmer is able to grasp more information about the word being stemmed, then it can apply more accurate normalization rules (which unlike suffix stripping rules can also modify the stem).
+
+Stochastic algorithms[edit]
+Stochastic algorithms involve using probability to identify the root form of a word. Stochastic algorithms are trained (they "learn") on a table of root form to inflected form relations to develop a probabilistic model. This model is typically expressed in the form of complex linguistic rules, similar in nature to those in suffix stripping or lemmatisation. Stemming is performed by inputting an inflected form to the trained model and having the model produce the root form according to its internal ruleset, which again is similar to suffix stripping and lemmatisation, except that the decisions involved in applying the most appropriate rule, or whether or not to stem the word and just return the same word, or whether to apply two different rules sequentially, are applied on the grounds that the output word will have the highest probability of being correct (which is to say, the smallest probability of being incorrect, which is how it is typically measured).
+
+Some lemmatisation algorithms are stochastic in that, given a word which may belong to multiple parts of speech, a probability is assigned to each possible part. This may take into account the surrounding words, called the context, or not. Context-free grammars do not take into account any additional information. In either case, after assigning the probabilities to each possible part of speech, the most likely part of speech is chosen, and from there the appropriate normalization rules are applied to the input word to produce the normalized (root) form.
+
+n-gram analysis[edit]
+Some stemming techniques use the n-gram context of a word to choose the correct stem for a word.[4]
+
+Hybrid approaches[edit]
+Hybrid approaches use two or more of the approaches described above in unison. A simple example is a suffix tree algorithm which first consults a lookup table using brute force. However, instead of trying to store the entire set of relations between words in a given language, the lookup table is kept small and is only used to store a minute amount of "frequent exceptions" like "ran => run". If the word is not in the exception list, apply suffix stripping or lemmatisation and output the result.
+
+Affix stemmers[edit]
+In linguistics, the term affix refers to either a prefix or a suffix. In addition to dealing with suffixes, several approaches also attempt to remove common prefixes. For example, given the word indefinitely, identify that the leading "in" is a prefix that can be removed. Many of the same approaches mentioned earlier apply, but go by the name affix stripping. A study of affix stemming for several European languages can be found here.[5]
+
+Matching algorithms[edit]
+Such algorithms use a stem database (for example a set of documents that contain stem words). These stems, as mentioned above, are not necessarily valid words themselves (but rather common sub-strings, as the "brows" in "browse" and in "browsing"). In order to stem a word the algorithm tries to match it with stems from the database, applying various constraints, such as on the relative length of the candidate stem within the word (so that, for example, the short prefix "be", which is the stem of such words as "be", "been" and "being", would not be considered as the stem of the word "beside").[citation needed].
+
+Language challenges[edit]
+While much of the early academic work in this area was focused on the English language (with significant use of the Porter Stemmer algorithm), many other languages have been investigated.[6][7][8][9][10]
+
+Hebrew and Arabic are still considered difficult research languages for stemming. English stemmers are fairly trivial (with only occasional problems, such as "dries" being the third-person singular present form of the verb "dry", "axes" being the plural of "axe" as well as "axis"); but stemmers become harder to design as the morphology, orthography, and character encoding of the target language becomes more complex. For example, an Italian stemmer is more complex than an English one (because of a greater number of verb inflections), a Russian one is more complex (more noun declensions), a Hebrew one is even more complex (due to nonconcatenative morphology, a writing system without vowels, and the requirement of prefix stripping: Hebrew stems can be two, three or four characters, but not more), and so on.
+
+Multilingual stemming[edit]
+Multilingual stemming applies morphological rules of two or more languages simultaneously instead of rules for only a single language when interpreting a search query. Commercial systems using multilingual stemming exist.[citation needed]
+
+Error metrics[edit]
+There are two error measurements in stemming algorithms, overstemming and understemming. Overstemming is an error where two separate inflected words are stemmed to the same root, but should not have been—a false positive. Understemming is an error where two separate inflected words should be stemmed to the same root, but are not—a false negative. Stemming algorithms attempt to minimize each type of error, although reducing one type can lead to increasing the other.
+
+For example, the widely used Porter stemmer stems "universal", "university", and "universe" to "univers". This is a case of overstemming: though these three words are etymologically related, their modern meanings are in widely different domains, so treating them as synonyms in a search engine will likely reduce the relevance of the search results.
+
+An example of understemming in the Porter stemmer is "alumnus" → "alumnu", "alumni" → "alumni", "alumna"/"alumnae" → "alumna". This English word keeps Latin morphology, and so these near-synonyms are not conflated.
+
+Applications[edit]
+Stemming is used as an approximate method for grouping words with a similar basic meaning together. For example, a text mentioning "daffodils" is probably closely related to a text mentioning "daffodil" (without the s). But in some cases, words with the same morphological stem have idiomatic meanings which are not closely related: a user searching for "marketing" will not be satisfied by most documents mentioning "markets" but not "marketing".
+
+Information retrieval[edit]
+Stemmers are common elements in query systems such as Web search engines. The effectiveness of stemming for English query systems were soon found to be rather limited, however, and this has led early information retrieval researchers to deem stemming irrelevant in general.[11] An alternative approach, based on searching for n-grams rather than stems, may be used instead. Also, stemmers may provide greater benefits in other languages than English.[12][13]
+
+Domain analysis[edit]
+Stemming is used to determine domain vocabularies in domain analysis.[14]
+
+Use in commercial products[edit]
+Many commercial companies have been using stemming since at least the 1980s and have produced algorithmic and lexical stemmers in many languages.[15][16]
+
+The Snowball stemmers have been compared with commercial lexical stemmers with varying results.[17][18]
+
+Google Search adopted word stemming in 2003.[19] Previously a search for "fish" would not have returned "fishing". Other software search algorithms vary in their use of word stemming. Programs that simply search for substrings will obviously find "fish" in "fishing" but when searching for "fishes" will not find occurrences of the word "fish".
+
+Text mining[edit]
+Stemming is used as a task in pre-processing texts before performing text mining analyses on it.
+
+The Natural Language Toolkit, or more commonly NLTK, is a suite of libraries and programs for symbolic and statistical natural language processing (NLP) for English written in the Python programming language. It supports classification, tokenization, stemming, tagging, parsing, and semantic reasoning functionalities.[4] It was developed by Steven Bird and Edward Loper in the Department of Computer and Information Science at the University of Pennsylvania.[5] NLTK includes graphical demonstrations and sample data. It is accompanied by a book that explains the underlying concepts behind the language processing tasks supported by the toolkit,[6] plus a cookbook.[7]
+
+NLTK is intended to support research and teaching in NLP or closely related areas, including empirical linguistics, cognitive science, artificial intelligence, information retrieval, and machine learning.[8] NLTK has been used successfully as a teaching tool, as an individual study tool, and as a platform for prototyping and building research systems. There are 32 universities in the US and 25 countries using NLTK in their courses.
